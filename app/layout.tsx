@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const CaviarDreams = localFont({
+const caviarDreams = localFont({
   src: [
     {
       path: './fonts/caviar_dreams_bold-webfont.woff2',
@@ -15,7 +16,15 @@ const CaviarDreams = localFont({
       style: 'normal',
     },
   ],
+  variable: '--font-caviar',
 })
+
+const poppins = Poppins({
+  weight: ['200', '500'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+})
+
 
 export const metadata: Metadata = {
   title: "Avelo Jewelry",
@@ -40,9 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${CaviarDreams.className} antialiased`}
-      >
+      <body className={`${caviarDreams.variable} ${poppins.variable} font-caviar font-extralight antialiased`}>
         {children}
       </body>
     </html>

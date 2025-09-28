@@ -3,12 +3,50 @@
 :root {
   --background-color: #f1f1f1;
   --foreground-color: #1B1A17;
+
+  --fs-h1: clamp(4rem, 3rem + 2vw, 6rem);       /* 64 → 96px */
+  --fs-h2: clamp(2.25rem, 1.25rem + 2vw, 3.5rem); /* 36 → 56px */
+  --fs-h3: clamp(1.75rem, 1rem + 1.5vw, 2.5rem);  /* 28 → 40px */
+  --fs-body: clamp(1.5rem, 1rem + 1vw, 2rem);     /* 24 → 32px */
+  --fs-small: clamp(1.125rem, 1rem + 0.25vw, 1.25rem); /* 18 → 20px */
+
+  --lh-snug: 120%;
+  --lh-relaxed: 130%;
+  --lh-loose: 150%;
 }
 
 @theme inline {
   --color-background: var(--background-color);
   --color-foreground: var(--foreground-color);
-  
+  --font-caviar: var(--font-caviar);
+  --font-poppins: var(--font-poppins)
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-snug);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-relaxed);
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-loose);
+}
+
+small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-loose);
 }
 
 /*
