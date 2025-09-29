@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "@/components/layout";
 
 const caviarDreams = localFont({
   src: [
@@ -49,8 +50,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${caviarDreams.variable} ${poppins.variable} font-caviar font-extralight antialiased`}>
-        {children}
+      <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased`}>
+        <main className="font-caviar font-extralights mx-auto max-w-[1440px]">
+          <div className="mx-5 md:mx-16 flex">
+            <Sidebar />
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/*variables*/
 :root {
   --background-color: #f1f1f1;
   --foreground-color: #1B1A17;
@@ -22,6 +22,15 @@
   --font-poppins: var(--font-poppins)
 }
 
+.btn-hover {
+  @apply hover:cursor-pointer
+}
+
+.background-texture {
+  @apply bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/bg/Bg-Texture.svg')]
+}
+
+/*styling*/
 h1 {
   font-size: var(--fs-h1);
   line-height: var(--lh-snug);
@@ -42,6 +51,7 @@ h3 {
 p {
   font-size: var(--fs-body);
   line-height: var(--lh-loose);
+  font-weight: lighter;
 }
 
 small {
