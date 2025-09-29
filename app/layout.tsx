@@ -52,9 +52,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased`}>
         <main className="font-caviar font-extralights mx-auto max-w-[1440px]">
-          <div className="mx-5 md:mx-16 flex">
+          <div id="webContent-container" className="mx-5 md:mx-16 flex">
             <Sidebar />
-            {children}
+            <div id="mainContent-container" className="overflow-y-auto flex-1">
+              {children}
+            </div>
           </div>
         </main>
       </body>

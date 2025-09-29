@@ -3,7 +3,7 @@ import React from 'react'
 
 const Sidebar = () => {
   return (
-    <aside className='max-md:hidden font-black mr-5 h-dvh w-14.03% min-w-fit max-w-[14.03%] sticky left-0 top-0 p-4'>
+    <aside className='max-md:hidden font-black mr-5 h-dvh w-14.03% min-w-fit max-w-[14.03%] sticky top-0 p-4'>
         <nav>
             <ul>
                 <li><Link href='#Home'><p className=''>Home</p></Link></li>
