@@ -51,11 +51,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased`}>
-        <main className="font-caviar font-extralights mx-auto max-w-[1440px]">
+        <main className="flex flex-col max-h-screen font-caviar font-extralights mx-auto max-w-[1440px]">
           <Header />
-          <div id="webContent-container" className="responsive-margin flex">
+          <div id="webContent-container" className="responsive-margin flex h-full overflow-y-auto">
             <Sidebar />
-            <div id="mainContent-container" className="overflow-y-auto flex-1">
+            <div id="mainContent-container" className="overflow-y-auto flex-1 h-full">
               {children}
             </div>
           </div>
