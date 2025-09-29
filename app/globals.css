@@ -30,6 +30,10 @@
   @apply bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/bg/Bg-Texture.svg')]
 }
 
+.responsive-margin {
+  @apply mx-5 md:mx-6 lg:mx-16
+}
+
 /*styling*/
 h1 {
   font-size: var(--fs-h1);
