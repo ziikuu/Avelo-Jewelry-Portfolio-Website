@@ -50,12 +50,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased`}>
-        <main className="flex flex-col max-h-screen font-caviar font-extralights mx-auto max-w-[1440px]">
+      <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased min-h-screen`}>
+        <main className="font-caviar flex flex-col h-screen mx-auto max-w-[1440px]">
           <Header />
-          <div id="webContent-container" className="responsive-margin flex h-full overflow-y-auto">
+          <div id="webContent-container" className="responsive-margin flex-1 flex overflow-hidden">
             <Sidebar />
-            <div id="mainContent-container" className="overflow-y-auto flex-1 h-full mt-6.5">
+            <div id="mainContent-container" className="overflow-y-auto flex-1 pr-5">
               {children}
             </div>
           </div>
