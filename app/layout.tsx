@@ -55,7 +55,7 @@ export default function RootLayout({
           <Header />
           <div id="webContent-container" className="responsive-margin flex-1 flex overflow-hidden">
             <Sidebar />
-            <div id="mainContent-container" className="overflow-y-auto flex-1 pr-5">
+            <div id="mainContent-container" className="overflow-y-auto flex-1 lg:pr-5">
               {children}
             </div>
           </div>
