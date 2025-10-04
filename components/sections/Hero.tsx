@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div id='heroContainer' className='grid gap-5 grid-cols-10 items-center h-[90%] overflow-hidden mb-[10%]'>
+    <div id='Home' className='grid max-lg:grid-flow-col gap-2.5 lg:gap-5 grid-cols-10 items-center min-h-[90%] overflow-hidden mb-[10%]'>
         <div id='bigImageContainer' className='col-span-6 mt-5 ml-5'>
           <Image
             src='/images/hero/ring_hero.jpg'
