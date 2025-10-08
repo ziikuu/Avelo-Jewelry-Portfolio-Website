@@ -22,11 +22,11 @@ const Portfolio = () => {
 
       <div className='flex flex-col-reverse lg:flex-row space-y-2.5 md:space-x-5'>
         <div id='text2' className='max-w-full p-5'>
-          <h1>Radiant Elegance</h1>
-          <p className='text-justify'>A sparkling set that captures timeless sophistication — a diamond-studded bracelet with intricate oval links, a textured band ring adorned with shimmering stones, and bold square-cut earrings framed with dazzling brilliance. A perfect harmony of classic and modern glamour.</p>
+          <h1>Timeless Charm</h1>
+          <p className='text-justify'>A graceful diamond tennis necklace, a pearl ring crowned with gold accents, a bold black-and-diamond cocktail ring, and a round-cut diamond bracelet — a collection that speaks of refined beauty and classic allure.</p>
         </div>
         <Image
-          src='/images/portfolio/portfolioimg.avif'
+          src='/images/portfolio/portfolioimg2.avif'
           alt='Gold ring with gemstone'
           width={1200}
           height={800}
