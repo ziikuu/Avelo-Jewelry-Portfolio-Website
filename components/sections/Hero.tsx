@@ -46,7 +46,7 @@ const Hero = () => {
             className='object-cover'
             style={{ boxShadow: '-8px -8px 6.2px 7px rgba(0, 0, 0, 0.25)' }}
           />
-          <h1 className='absolute top-5 font-caviar text-background text-end p-5 justify-end bg-[rgba(27,26,23,0.2)]'>AVELO <br /> JEWELRY</h1>
+          <h1 className='absolute top-5 font-caviar text-background text-end p-5 pl-0 justify-end bg-[rgba(27,26,23,0.2)]'>AVELO <br /> JEWELRY</h1>
         </div>
 
         <div className='h-5/11 lg:h-9/11 space-y-5'>
