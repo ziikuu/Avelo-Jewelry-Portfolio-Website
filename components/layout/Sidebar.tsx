@@ -8,7 +8,7 @@ const Sidebar = () => {
         <ul className=''>
           <li><Link href='/'><p>Home</p></Link></li>
           <li><Link href='#About'><p>About</p></Link></li>
-          <li><Link href='/Portfolio'><p>Portfolio</p></Link></li>
+          <li><Link href='#Portfolio'><p>Portfolio</p></Link></li>
           <li><Link href='#Contacts'><p>Contacts</p></Link></li>
         </ul>
       </nav>

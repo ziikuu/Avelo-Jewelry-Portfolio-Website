@@ -14,7 +14,7 @@ const About = () => {
               alt='Silver wedding bands'
               width={400}
               height={600}
-              priority
+              loading='lazy'
               className='object-cover'
               style={{ boxShadow: '-8px -8px 6.2px 7px rgba(0, 0, 0, 0.25)' }}
             />
