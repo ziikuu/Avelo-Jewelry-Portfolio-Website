@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='flex mt-5 max-md:flex-col-reverse gap-2.5 lg:gap-5'>
+    <section id='About' className='flex mt-5 max-md:flex-col-reverse gap-2.5 lg:gap-5'>
         <div id='textContainer' className='font-caviar'>
             <h1>About Us</h1>
             <p>We Started our business since 1972 inherited from my Mother</p>

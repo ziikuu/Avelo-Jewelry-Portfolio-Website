@@ -27,7 +27,7 @@
 }
 
 .background-texture {
-  @apply bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/bg/Bg-Texture.svg')]
+  @apply bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/bg/Bg-Texture.avif')]
 }
 
 .responsive-margin {
