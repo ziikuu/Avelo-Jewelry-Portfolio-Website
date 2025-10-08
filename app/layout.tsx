@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header, Sidebar } from "@/components/layout";
+import { Loader } from '@/components/ui/Loader'
 
 const caviarDreams = localFont({
   src: [
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased min-h-screen`}>
+        <Loader />
         <main className="font-caviar flex flex-col h-screen mx-auto max-w-[1440px]">
           <Header />
           <div id="webContent-container" className="responsive-margin flex-1 flex overflow-hidden">

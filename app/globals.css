@@ -63,6 +63,35 @@ small {
   line-height: var(--lh-loose);
 }
 
+/* Loader */
+.loader-container {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-[var(--background-color)];
+}
+
+.loader {
+  @apply relative w-16 h-16;
+}
+
+.loader-ring {
+  @apply absolute w-16 h-16 border-[3px] border-[var(--foreground-color)] rounded-full;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 /*
 :root {
   --background: #ffffff;
