@@ -2,43 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-{/*
-const Hero = () => {
-  return (
-    <div id='Home' className='grid grid-flow-col gap-2.5 lg:gap-5 grid-rows-11 grid-cols-10 items-center h-full overflow-hidden pb-[10%]'>
-        <div id='bigImageContainer' className='row-span-6 col-span-6 pt-5 pl-5 h-full w-full'>
-          <Image
-            src='/images/hero/ring_hero.jpg'
-            alt='Gold ring with gemstone'
-            width={1200}
-            height={800}
-            priority
-            className='h-full w-full'
-          />
-        </div>
-
-        <div id='smallImageContainer' className='row-span-4 col-span-4 pt-5 pl-5 h-full w-full'>
-          <Image 
-            src='/images/hero/ring_hero (2).jpg'
-            alt='Silver wedding bands'
-            width={600}
-            height={400}
-            priority
-            className='h-full w-full'
-          />
-        </div>
-    </div>
-  )
-}
-  */}
-
 const Hero = () => {
   return (
     <section id='Home' className='flex flex-col lg:flex-row lg:items-center lg:justify-center gap-2.5 lg:gap-5 h-full max-h-[884px] overflow-y-hidden pb-[10%]'>
         
         <div id='bigImageContainer' className='relative pt-5 pl-5 w-11/12 h-6/11 lg:h-full flex overflow-hidden justify-end'>
           <Image
-            src='/images/hero/ring_hero.jpg'
+            src='/images/hero/ring_hero.avif'
             alt='Gold ring with gemstone'
             width={1200}
             height={800}
@@ -52,7 +22,7 @@ const Hero = () => {
         <div className='h-5/11 lg:h-9/11 space-y-5'>
           <div id='smallImageContainer' className='pt-5 pl-5 max-lg:w-10/12 h-4/5 overflow-hidden flex justify-center max-lg:ml-auto'>
               <Image 
-                src='/images/hero/ring_hero (2).jpg'
+                src='/images/hero/ring_hero (2).avif'
                 alt='Silver wedding bands'
                 width={600}
                 height={400}
