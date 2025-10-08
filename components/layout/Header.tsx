@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ui'
+import { Button, NavButton } from '../ui'
 import Link from 'next/link'
 
 const Header = () => {
@@ -9,6 +9,7 @@ const Header = () => {
         <h2>Repair Shop</h2>
       </Link>
       <Button />
+      <NavButton />
     </header>
   )
 }
