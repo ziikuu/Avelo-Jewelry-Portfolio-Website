@@ -34,7 +34,7 @@ const Hero = () => {
 
 const Hero = () => {
   return (
-    <div id='Home' className='flex flex-col lg:flex-row lg:items-center lg:justify-center gap-2.5 lg:gap-5 h-full max-h-[884px] overflow-y-hidden pb-[10%]'>
+    <section id='Home' className='flex flex-col lg:flex-row lg:items-center lg:justify-center gap-2.5 lg:gap-5 h-full max-h-[884px] overflow-y-hidden pb-[10%]'>
         
         <div id='bigImageContainer' className='relative pt-5 pl-5 w-11/12 h-6/11 lg:h-full flex overflow-hidden justify-end'>
           <Image
@@ -70,7 +70,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-    </div>
+    </section>
   )
 }
 
