@@ -53,7 +53,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${caviarDreams.variable} ${poppins.variable} background-texture text-foreground antialiased min-h-screen`}>
         <Loader />
-        <main className="font-caviar flex flex-col h-screen mx-auto max-w-[1440px]">
+        <main className="font-caviar flex flex-col h-screen mx-auto min-w-[375px] max-w-[1440px] overflow-x-scroll">
           <Header />
           <div id="webContent-container" className="responsive-margin flex-1 flex overflow-hidden">
             <Sidebar />
