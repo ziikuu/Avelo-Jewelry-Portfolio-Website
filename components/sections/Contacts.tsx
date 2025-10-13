@@ -4,7 +4,7 @@ import { IconContext } from 'react-icons';
 
 const Contacts = () => {
   return (
-    <section id='Contacts' className='space-y-5 h-full overflow-x-scroll min-w-[400px]'>
+    <section id='Contacts' className='space-y-5 h-full min-w-[400px]'>
         <h1>Contact Us</h1>
         <p>Feel free to contact us if you have any inquiries! You can also reach out through Viber using my number.</p>
         <div className='flex space-x-5 mt-10 items-center font-black'>
