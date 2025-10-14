@@ -9,23 +9,25 @@ const NavButton = () => {
 
   return (
     <div>
-      <div className='md:hidden max-md:flex max-md:items-center '>
+      <div className='z-2000 fixed right-5 top-8 md:hidden max-md:flex max-md:items-center '>
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg width="54" height="25" viewBox="0 0 54 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect y="20" width="54" height="5" rx="2.5" fill="#1B1A17"/>
-            <rect y="10" width="54" height="5" rx="2.5" fill="#1B1A17"/>
-            <rect width="54" height="5" rx="2.5" fill="#1B1A17"/>
+            <rect className={`transition-all duration-300 origin-left ${isOpen ? '-rotate-20' :''}`} y="20" width="54" height="5" rx="2.5" fill="#1B1A17"/>
+            <rect className={`transition-all duration-300 ${isOpen ? 'hidden':''}`} y="10" width="54" height="5" rx="2.5" fill="#1B1A17"/>
+            <rect className={`transition-all duration-300 origin-left ${isOpen ? 'rotate-20':''}`} width="54" height="5" rx="2.5" fill="#1B1A17"/>
             </svg>
           </button>
       </div>
       {isOpen && (
-        <nav>
-          {navLinks.map((link) => (
-            <Link key={link.link} href={link.link}>
-              <p>{link.label}</p>
-            </Link>
-          ))}
-        </nav>
+        <div className='flex justify-center items-center bg-background fixed left-0 top-0  w-screen h-screen z-1000'>
+          <nav className='font-black'>
+            {navLinks.map((link) => (
+              <Link onClick={(() => setIsOpen(!isOpen))} className='flex justify-center' key={link.link} href={link.link}>
+                <p>{link.label}</p>
+              </Link>
+            ))}
+          </nav>
+        </div>
       )}
     </div>
   )
