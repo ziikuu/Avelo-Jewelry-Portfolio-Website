@@ -15,6 +15,7 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
           alt={alt}
           width={300}
           height={300} 
+          loading='lazy'
           className='object-cover min-w-full h-full self-center p-2 overflow-hidden'
         />
       </div>
