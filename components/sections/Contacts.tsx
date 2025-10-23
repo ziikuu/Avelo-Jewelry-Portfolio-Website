@@ -9,7 +9,7 @@ const Contacts = () => {
         <p>Feel free to contact us if you have any inquiries! You can also reach out through Viber using my number.</p>
         <div className='flex space-x-5 mt-10 items-center font-black'>
             <IoCallOutline size={50} />
-            <p>09770139650</p>
+            <p>09175165398</p>
         </div>
         <div className='flex space-x-5 mt-10 items-center font-black'>
             <IoMailOutline size={50} />
