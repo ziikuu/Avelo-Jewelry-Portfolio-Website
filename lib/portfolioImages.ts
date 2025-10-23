@@ -2,7 +2,7 @@ export const portfolioCounts = {
     bracelet: 1,
     earring: 6,
     necklace: 13,
-    ring: 2,
+    ring: 30,
     set: 5,
 }
 
