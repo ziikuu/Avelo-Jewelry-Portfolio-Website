@@ -21,7 +21,7 @@ const categoryLabels: Record<CategoryKey, string> = {
   set: 'Sets',
 };
 
-const page = () => {
+const Page = () => {
   const [activeFilter, setActiveFilter] = useState<CategoryKey>('all');
 
   //generate all items
@@ -138,4 +138,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
