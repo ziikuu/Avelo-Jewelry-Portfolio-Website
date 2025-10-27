@@ -1,7 +1,7 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
-import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type ProductCardProps = {
   src: string;
@@ -80,7 +80,7 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
   };
 
   // simple touch pinch handling
-  const distanceBetween = (t1: Touch, t2: Touch) => Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+  const distanceBetween = (t1: React.Touch, t2: React.Touch) => Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
 
   const onTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length === 2) {
@@ -138,7 +138,7 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
           onClick={openModal}
         />
 
-        {isOpen && (
+        {isOpen && typeof document !== 'undefined' && createPortal(
           <div
             className='fixed inset-0 w-full h-full p-10 bg-foreground/80 z-[9999] flex justify-center items-center'
             onClick={closeModal}
@@ -177,7 +177,8 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
                 }}
               />
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
       <div className='capitalize'>{alt}</div>
