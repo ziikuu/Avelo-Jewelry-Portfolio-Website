@@ -52,3 +52,9 @@ export const portfolioCounts = {
     set: 5,
 }
 ```
+
+## Repomix is a powerful tool that packages your entire codebase into a single AI-friendly file.
+1. Use this command to CLI to generate reppomix-output.xml for AI refactoring
+```
+npx repomix@latest
+```
