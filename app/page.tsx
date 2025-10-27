@@ -1,6 +1,5 @@
 import { Separator } from "@/components/layout";
 import { About, Contacts, Hero, Portfolio } from "@/components/sections";
-import { Button } from "@/components/ui";
 
 export default function Home() {
   return (

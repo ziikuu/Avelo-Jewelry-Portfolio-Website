@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoCallOutline, IoMailOutline } from "react-icons/io5";
-import { IconContext } from 'react-icons';
 
 const Contacts = () => {
   return (
