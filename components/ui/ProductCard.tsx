@@ -50,6 +50,7 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
   // pointer drag to pan
   const onPointerDown = (e: React.PointerEvent) => {
     if (scale === 1) return; // only allow panning when zoomed
+    e.preventDefault(); // prevent native drag/select behavior
     (e.target as Element).setPointerCapture(e.pointerId);
     setIsPanning(true);
     setLastPointer({ x: e.clientX, y: e.clientY });
@@ -131,7 +132,9 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
           width={300}
           height={300} 
           loading='lazy'
-          className='object-cover min-w-full h-full self-center p-2 overflow-hidden cursor-pointer'
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+          className='object-cover min-w-full h-full self-center p-2 overflow-hidden cursor-pointer select-none'
           onClick={openModal}
         />
 
@@ -151,10 +154,12 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
               onTouchStart={onTouchStart}
               onTouchMove={onTouchMove}
               onTouchEnd={onTouchEnd}
+              onContextMenu={(e) => e.preventDefault()} // prevent browser context menu while interacting
               className='relative w-full h-full max-w-4xl max-h-[80vh] bg-transparent overflow-hidden'
               style={{
                 touchAction: 'none', // allow custom touch handling (pinch & pan)
-                cursor: isPanning ? 'grabbing' : scale > 1 ? 'grab' : 'auto'
+                cursor: isPanning ? 'grabbing' : scale > 1 ? 'grab' : 'auto',
+                userSelect: 'none' // prevent selection during drag
               }}
             >
               <Image
@@ -163,6 +168,8 @@ export default function ProductCard({ src, alt }: ProductCardProps) {
                 width={1200}
                 height={1200}
                 loading='lazy'
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
                 className='object-contain min-w-full h-full self-center select-none pointer-events-none'
                 style={{
                   transform: `translate(${translate.x}px, ${translate.y}px) scale(${scale})`,
